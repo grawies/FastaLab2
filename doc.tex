@@ -40,19 +40,52 @@ linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \thispagestyle{empty}
 
 \section{Introduction}
-The resistivity of a metal depends on its temperature. For many metals and alloys the resistivity falls to zero for temperatures below a critical temperature $T_c$, often in the liquid helium range. At this temperature the material undergoes a phase transition to a \emph{superconducting} state. Theses materials are called \emph{superconductors}.\\
-There are two types of superconductors, type I and type II. They differ in how they are magnetized by an applied magnetic field. This difference is shown in figure \ref{fig:superconductortypes}.
+\subsection{Superconductors}
+The resistivity of a metal depends on its temperature. 
+For many metals and alloys the resistivity falls to zero for temperatures below a critical temperature $T_c$, often in the liquid helium range.
+At this temperature the material undergoes a phase transition to a \emph{superconducting} state.
+These materials are called \emph{superconductors}.
 
-\image{superconductortypes}{There are two types of superconductor, from \cite{Kittel}\label{fig:superconductortypes}}
+\subsection{The Meissner Effect}
+Interesing effects depending on the temperature arise when an external magnetic field is applied to the superconductor. For sufficiently small magnetic fields $H_a=B_a / \mu_0$ the superconductor behaves as a perfect diamagnet. The total field $B$ is temperature dependent,$B(T)$, and inside the superconductor at low $H_a$ the field is $B(T)=0$. This effect is called the \emph{Meissner effect} after one of its discoverers. However, when the applied magnetic field reaches a threshold $H_c(T)$ the magnetization disappears and the superconductivity is destroyed.
+\subsection{Type I and type II superconductors}
+There are two types of superconductors, type I and type II.
+They differ in how they behave when an applied magnetic field destroys the superconductivity.\\
+Type II superconductors behave like perfect diamagnets up to a first critical magnetic field $H(T)=H_{c1}(T)$.
+As $H$ increases past $H_{c1}$ the magnetization decreases in magnitude until it reaches 0 at a point $H(T)=H_{c2}(T)$ where it finally loses its superconducting properties.\\
+Type I superconductors do not have this intermediate state between $H_{c1}$ and $H_{c2}$.
+This could be expressed as $H_{c1}=H_{c2}=H_c$, although $H_c$ is for almost all type I conductors lower than $H_{c2}$ for type II superconductors, making type I inappropriate for some applications.\\
+The behaviours of the different types of superconductors are shown in figure \ref{fig:superconductortypes}.
+
+\image{superconductortypes}{The magnetization of a superconductor as a function of applied magnetic field $H_a$ at a fixed superconducting temperature $T<T_c$ for superconductors types I (a) and II (b). Figure taken from page 264 of \cite{Kittel}\label{fig:superconductortypes}.}
+
+\subsection{Measuring the critical temperature $T_c$}
+A simple way to determine $T_c$ for a superconduction material is to measure the electrical resistance over a piece of material while lowering and measuring the temperature.
+At the critical temperature the resistance suddenly drops to $0$.
+
+\subsection{This experiment}
+
 
 \section{Experimental procedure}
+The superconducting material in this experiment is a bulk ceramic sample of YBa$_2$Cu$_3$O$_{7-\delta}$, a type II superconductor.
+The sample is mounted in a measuring module which maintains a constant current $I$ over the sample and measures the voltage $U$ over the sample. $U$ is reported as $U_{B1}$ in the measuring software. There is an iridium resistor in contact with the YBCO sample. A current is maintained over the resistor, and the voltage over it is transformed to a temperature measurement in the lab software.\\
+Given a constant current, the voltage is effectively a measure of the sample resistance $R$ through Ohm's law $U=RI$. When the resistance drops to 0 the voltage does too.\\
+The module is lowered into liquid nitrogen to the critical temperature and then lifted out of the liquid nitrogen.
+This results in a temperature-voltage curve running from room temperature to below the critical temperature and back up again. The measurements were cancelled before reaching room temperature again.
 
 \section{Measurements results}
+The resulting temperature-voltage curve is shown in figure \ref{fig:temperature-voltage}. Between $T = 99.65$ K and $T = 96.15$ K the voltage rapidly drops to near 0 when cooling down and in the same interval when warming in room temperature it sharply increases to the same voltage level as before entering the superconducting state.
+\plot{temperature-voltage}{The voltage over the superconductor sample as the temperature varies from room temperature to superconducting temperatures and back up toward room temperature.}
 
 \section{Discussion of the results}
-
-\section{Conclusions}
-Stuff happened, y0.
+The lowest temperature at which the sample was superconducting was $Tc = 96.15$, which is taken to be the critical temperature.\\
+This is a few K higher than the critical temperature $T_c^{theory}=90.0$ K creported in \cite{Kittel}.\\
+Variations between measurements with the same equipment and setup are unlikely to alter the result much, as the measured temperature interval in which the sample transitions to or from the superconducting state was identical for cooling and warming, although the measurements were done close in time.
+The voltage curve is different when warming the sample from the curve obtained when cooling it.
+This difference in measurements could be due to temperature variations when cooling and heating.
+The temperature measurement method assumes that the iridium and YBCO samples are in thermal equillibrium, which is not the case.
+The cooling process is faster than the heating process, which would cause more variations which would imply that the reported voltage is for a different temperature than the reported.
+If the sample is warmer than the iridium resistor then the reported temperature would have a higher reported voltage.
 
 \begin{thebibliography}{1}
     \bibitem{Kittel}
@@ -60,6 +93,5 @@ Stuff happened, y0.
         {\em Introduction to Solid State Physics 8th Edition},
         2005.
 \end{thebibliography}
-
 
 \end{document}

@@ -78,20 +78,28 @@ the electrical resistance over a piece of material whilst varying the
 temperature.
 The resistance will suddenly drop when we get below the critical temperature.
 
+\subsection{Four-point probe measurement of resistance}
+To measure the resistance over a piece of superconducting material is not as straightforward as measuring over normally conducting materials. The measurement is achieved with a four-point probe measurement.
+\image{fourpoint}{The setup of the four-point measurement used in this laboratory. Two separate electrical circuit loops ensure contact voltage drops are taken into account in the measurement. Image taken from the lab instruction.}
+In Figure \ref{fig:fourpoint}, the points 1 and 4 are the contacts of a loop feeding a constant current over the superconducting material, in this lab the current is 140 mA.
+When the material is in a superconducting state the resistance is so low that the voltage drop over the current loop contacts is no longer negligible.
+In a four-point measurement we're measuring the voltage not with the circuit supplied with the contacts of the current loop, but with a separate loop connecting at points 2 and 3 in Figure \ref{fig:fourpoint}.
+The high impedance of the voltmeter ensures that the current flow in this loop is minimized.
+This also minimizes the potential drop over the contacts, resulting in only the resistance of the superconducting sample between points 2 and 3 is registered. 
+
 \section{Experimental procedure}
 The superconducting material in this experiment is a bulk ceramic sample of
 YBa$_2$Cu$_3$O$_{7-\delta}$ (YBCO), a type II superconductor.
 The sample is mounted in a measuring module that feeds a constant current $I$
 over the sample and at the same time measures the voltage $U$ over the sample.
 $U$ is reported as $U_{B1}$ in the measuring software.
-The resistance is measured as a four-point measurement. This method yields high accuracies for low-resistance measurements,
-as it removes the influence of the voltage drop from cables and connectors
-which in the low-resistance case can be very significant.\\
-There is an iridium resistor in contact with the YBCO sample. A fixed current
-of $140$mA is maintained over the resistor, and the voltage over it is transformed to a temperature measurement in the lab software.\\
+The voltage is measured as a four-point measurement.
+There is an iridium resistor in contact with the YBCO sample.
+A fixed current is maintained over the resistor.
+The voltage over the resistor is transformed to a temperature measurement in the lab software.\\
 Given a constant current, the voltage is effectively a measure of the sample
-resistance $R$ through Ohm's law $U=RI$. When the resistance drops to 0 the
-voltage does too since there is no voltage drop over zero resistance.\\
+resistance $R$ through Ohm's law $U=RI$.
+When the resistance drops to 0 the voltage does too since there is no voltage drop over zero resistance.\\
 The module is lowered into liquid nitrogen to below the critical temperature and then lifted out.
 This results in a temperature-voltage curve running from room temperature to below the critical temperature and back up again.
 The measurements were cancelled before reaching room temperature again.
